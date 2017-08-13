@@ -5,7 +5,7 @@ if (process.argv.length !== 4) {
   let usage = `Usage: ${process.argv[0]} ${process.argv[1]} `;
   usage += `<yahoo japan id> <yahoo japan password>`;
   console.error(usage);
-  process.exit(1);
+  process.exit(0);
 }
 
 const yid = process.argv[2];
@@ -48,6 +48,6 @@ async function run() {
 run()
   .then((result) => {
     console.log(result);
-    process.exit(result > 0 ? 1 : 0);
+    process.exit(result > 0 ? 0 : 1);
   })
   .catch(console.error.bind(console));
