@@ -21,7 +21,7 @@ npm i -g csb
 
 ## Usage
 ```bash
-csb <phone> <password>
+csb <yahoo japan id> <yahoo japan password>
 ```
 
 ## FAQ
