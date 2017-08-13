@@ -22,6 +22,7 @@ async function run() {
     .goto('https://my.softbank.jp/msb/d/logout/send')
     .wait('#logintop')
     .goto('https://login.yahoo.co.jp/config/login?.lg=jp&.intl=jp&logout=1&.src=www&.done=https://www.yahoo.co.jp/')
+    .wait('.logoutMsg')
     // go to login page
     .goto('https://my.softbank.jp/msb/d/webLink/doSend/WMS010001')
     .wait('input[type="image"]')
@@ -35,7 +36,12 @@ async function run() {
     .click('button#btnSubmit')
     // go to webmail page
     .wait(10000)
-    .html();
+    .html()
+    // clean up
+    .goto('https://my.softbank.jp/msb/d/logout/send')
+    .wait('#logintop')
+    .goto('https://login.yahoo.co.jp/config/login?.lg=jp&.intl=jp&logout=1&.src=www&.done=https://www.yahoo.co.jp/')
+    .wait('.logoutMsg');
   await chromeless.end();
 
   const match = html.match(/ow-icon-mail-folderColumn-unreadCount">([0-9]+)/);
