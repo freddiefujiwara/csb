@@ -1,6 +1,6 @@
 {
     "name": "csb",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "S! Mail Checker for cli",
     "scripts": {
         "clean": "rimraf lib",
