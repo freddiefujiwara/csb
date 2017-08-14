@@ -8,10 +8,12 @@
 # csb
 S! Mail checker for cli
 
+![Work on windows](https://media.giphy.com/media/3oEhmGEI8q2FGOAnaU/giphy.gif)
 
 ## Requirements
 
  - Node 7.6 or later
+ - Chrome 59 or later
 
 ## Installation
 
