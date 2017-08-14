@@ -26,10 +26,13 @@ async function run() {
     // go to login page
     .goto('https://my.softbank.jp/msb/d/webLink/doSend/WMS010001')
     .wait('input[type="image"]')
+    .focus('input[type="image"]')
     .click('input[type="image"]')
+    .wait(1000)
     // go to yahoo login page
     .wait('input#username')
     .type(yid, 'input#username')
+    .wait(1000)
     .click('button#btnNext')
     .wait(1000)
     .type(password, 'input#passwd')
